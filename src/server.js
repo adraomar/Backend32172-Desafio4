@@ -9,6 +9,7 @@ let id = 0;
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static("public"));
 app.use("/api", router);
